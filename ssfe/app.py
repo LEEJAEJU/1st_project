@@ -165,7 +165,7 @@ def video_download(key):
     )
 
 
-@app.route("/insert/Flame", methods=["POST"])  #
+@app.route("/insert/Flame", methods=["POST"])
 def flame_data_insert_and_save():
     if request.method == "POST":
         num = 1
@@ -178,7 +178,7 @@ def flame_data_insert_and_save():
     return response
 
 
-@app.route("/insert/Gas", methods=["POST"])  #
+@app.route("/insert/Gas", methods=["POST"])
 def CO_gas_data_insert_and_save():
     if request.method == "POST":
         num = 2
@@ -191,7 +191,7 @@ def CO_gas_data_insert_and_save():
     return response
 
 
-@app.route("/insert/Led", methods=["POST"])  #
+@app.route("/insert/Led", methods=["POST"])
 def led_on_off_data_insert_and_save():
     if request.method == "POST":
         num = 3
@@ -204,7 +204,7 @@ def led_on_off_data_insert_and_save():
     return response
 
 
-@app.route("/insert/Visitor", methods=["POST"])  #
+@app.route("/insert/Visitor", methods=["POST"])
 def Visitor_data_insert_and_save():
     if request.method == "POST":
         num = 4
@@ -217,7 +217,7 @@ def Visitor_data_insert_and_save():
     return response
 
 
-@app.route("/insert/Light", methods=["POST"])  #
+@app.route("/insert/Light", methods=["POST"])
 def light_on_off_data_insert_and_save():
     if request.method == "POST":
         num = 5
@@ -230,7 +230,7 @@ def light_on_off_data_insert_and_save():
     return response
 
 
-@app.route("/insert/Buzzer", methods=["POST"])  #
+@app.route("/insert/Buzzer", methods=["POST"])
 def buzzer_data_insert_and_save():
     if request.method == "POST":
         num = 6
@@ -243,7 +243,7 @@ def buzzer_data_insert_and_save():
     return response
 
 
-@app.route("/insert/TempHm", methods=["POST"])  #
+@app.route("/insert/TempHm", methods=["POST"])
 def TempHm_data_insert_and_save():
     if request.method == "POST":
         num = 7
@@ -255,10 +255,14 @@ def TempHm_data_insert_and_save():
     response = make_response("값을 전달받았습니다.", 200)
     return response
 
+@app.route("/insert/test", methods=["POST"])
+def test():
+    post_data = request.get_json(" ")
+    print(post_data)
+    response = make_response("값을 전달받았습니다.", 200)
+    return response
+
 
 if __name__ == "__main__":
     app.debug = False
     app.run(host="0.0.0.0", port=8080)
-
-
-    print("tetetetetete")
