@@ -67,6 +67,7 @@ class S3:
         headers = {"Content-Disposition": "attachment; filename={}".format(key)}
         return data, headers
 
+c = ""
 
 db = Database(
     host=os.environ.get("rds_endpoint"),
@@ -76,7 +77,6 @@ db = Database(
     db=os.environ.get("db_name"),
     charset=os.environ.get("language_setting"),
 )
-
 
 def sever_connect_insert(sql, recode):
     try:

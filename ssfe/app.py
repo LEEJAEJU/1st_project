@@ -23,7 +23,6 @@ from vide_fuc import (
 
 from API_insert import insert_check, insert_check2
 
-
 app = Flask(__name__)
 
 
@@ -266,6 +265,3 @@ def test():
 if __name__ == "__main__":
     app.debug = False
     app.run(host="0.0.0.0", port=8080)
-
-
-print("tteesstt")
